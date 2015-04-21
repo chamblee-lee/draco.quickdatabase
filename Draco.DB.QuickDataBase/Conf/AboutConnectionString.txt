@@ -1,0 +1,132 @@
+﻿关于数据库连接串：
+参考：http://www.connectionstrings.com/
+数据库：
+	SQLServer2005:
+			访问器名称：.NET Framework Data Provider for SQL Server
+			Type:		.NET Framework Class Library
+			Usage:		System.Data.SqlClient.SqlConnection
+			Standard Security：Data Source=myServerAddress;Initial Catalog=myDataBase;User Id=myUsername;Password=myPassword;
+								Server=myServerAddress;Database=myDataBase;User ID=myUsername;Password=myPassword;Trusted_Connection=False;
+			Trusted Connection：Data Source=myServerAddress;Initial Catalog=myDataBase;Integrated Security=SSPI;
+								Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;
+								
+			访问器名称：.NET Framework Data Provider for OLE DB
+			Type:		.NET Framework Wrapper Class Library
+			Usage:		System.Data.OleDb.OleDbConnection
+			Bridging to SQL Native Client OLE DB ：Provider=SQLNCLI;Server=myServerAddress;Database=myDataBase;Uid=myUsername; Pwd=myPassword;
+			Bridging to OLE DB Provider for SQL Server:Provider=SQLOLEDB;Data Source=myServerAddress;Initial Catalog=myDataBase;User Id=myUsername; Password=myPassword;
+			
+			访问器名称：.NET Framework Data Provider for ODBC
+			Type:		.NET Framework Wrapper Class Library
+			Usage:		System.Data.Odbc.OdbcConnection
+			Bridging to SQL Native Client 10.0 ODBC Driver :Driver={SQL Server Native Client 10.0};Server=myServerAddress;Database=myDataBase;Uid=myUsername;Pwd=myPassword;
+			
+	Oracle:
+			访问器名称：.NET Framework Data Provider for Oracle
+			Type:		.NET Framework Class Library
+			Usage:		System.Data.OracleClient.OracleConnection
+			Standard：	Data Source=MyOracleDB;Integrated Security=yes;
+			Specifying username and password：Data Source=MyOracleDB;User Id=myUsername;Password=myPassword;Integrated Security=no;
+			Omiting tnsnames.ora：Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=MyHost)(PORT=MyPort))(CONNECT_DATA=(SERVICE_NAME=MyOracleSID)));User Id=myUsername;Password=myPassword;
+			Using Connection Pooling：Data Source=myOracleDB;User Id=myUsername;Password=myPassword;Min Pool Size=10;Connection Lifetime=120;Connection Timeout=60;Incr Pool Size=5;Decr Pool Size=2;
+			
+			访问器名称：Oracle Data Provider for .NET / ODP.NET
+			Type:		.NET Framework Class Library
+			Usage:		Oracle.DataAccess.Client.OracleConnection
+			Using TNS：	Data Source=TORCL;User Id=myUsername;Password=myPassword
+			Using ODP.NET without tnsnames.ora：Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=MyHost)(PORT=MyPort)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=MyOracleSID)));User Id=myUsername;Password=myPassword;
+			Using the Easy Connect Naming Method ：Data Source=username/password@//myserver:1521/my.service.com;
+			
+			访问器名称：.NET Framework Data Provider for OLE DB
+			Type:		.NET Framework Wrapper Class Library
+			Usage:		System.Data.OleDb.OleDbConnection
+			Bridging to Oracle Provider for OLE DB：Provider=OraOLEDB.Oracle;Data Source=MyOracleDB;User Id=myUsername;Password=myPassword;OLEDB.NET=True;
+			
+			访问器名称：.NET Framework Data Provider for ODBC
+			Type:		.NET Framework Wrapper Class Library
+			Usage:		System.Data.Odbc.OdbcConnection
+			Bridging to Oracle in OraHome92 ODBC Driver：Driver={Oracle in OraHome92};Server=myServerAddress;Dbq=myDataBase;Uid=myUsername;Pwd=myPassword;
+			
+	SQLite：		
+			访问器名称：SQLite.NET
+			Type:		.NET Framework Class Library
+			Usage:		System.Data.SQLite.SQLiteConnection
+			Basic：		Data Source=filename;Version=3;
+			Using UTF16：Data Source=filename;Version=3;UseUTF16Encoding=True;
+			With password：Data Source=filename;Version=3;Password=myPassword;
+			Using the pre 3.3x database format：Data Source=filename;Version=3;Legacy Format=True;
+			With connection pooling：Data Source=filename;Version=3;Pooling=False;Max Pool Size=100;
+			Read only connection：Data Source=filename;Version=3;Read Only=True;
+			
+			访问器名称：.NET Framework Data Provider for ODBC
+			Type:		.NET Framework Wrapper Class Library
+			Usage:		System.Data.Odbc.OdbcConnection
+			Bridging to SQLite3 ODBC Driver：DRIVER=SQLite3 ODBC Driver;Database=mydb.db;LongNames=0;Timeout=1000;NoTXN=0;SyncPragma=NORMAL;StepAPI=0;
+	
+	Access:	
+			访问器名称：.NET Framework Data Provider for OLE DB
+			Type:		.NET Framework Wrapper Class Library
+			Usage:		System.Data.OleDb.OleDbConnection	
+			Bridging to Jet OLE DB 4.0：Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\mydatabase.mdb;User Id=admin;Password=;
+			Bridging to ACE OLEDB 12.0:Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\myFolder\myAccess2007file.accdb;Persist Security Info=False;
+			
+			访问器名称：.NET Framework Data Provider for ODBC
+			Type:		.NET Framework Wrapper Class Library
+			Usage:		System.Data.Odbc.OdbcConnection
+			Bridging to Microsoft Access ODBC Driver：Driver={Microsoft Access Driver (*.mdb)};Dbq=C:\mydatabase.mdb;Uid=Admin;Pwd=;
+			
+	Excel:	
+			访问器名称：.NET Framework Data Provider for OLE DB
+			Type:		.NET Framework Wrapper Class Library
+			Usage:		System.Data.OleDb.OleDbConnection
+			Bridging to Jet OLE DB 4.0:Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\MyExcel.xls;Extended Properties="Excel 8.0;HDR=Yes;IMEX=1";
+			
+			访问器名称：.NET Framework Data Provider for ODBC
+			Type:		 .NET Framework Wrapper Class Library
+			Usage:		System.Data.Odbc.OdbcConnection
+			Bridging to Microsoft Excel ODBC Driver:Driver={Microsoft Excel Driver (*.xls)};DriverId=790;Dbq=C:\MyExcel.xls;DefaultDir=c:\mypath;
+			
+			访问器名称：.NET xlReader for Microsoft Excel
+			Type:		.NET Framework Class Library
+			Usage:		VM.xPort.ExcelClient.ExcelConnection
+			Excel file with header row：Data Source =c:\myExcelFile.xls;HDR=yes;Format=xls;
+			Excel file without header row：Data Source =c:\myExcelFile.xls;HDR=no;Format=xls;
+			
+	MySQL：
+			访问器名称：MySQLDriverCS
+			Type:		.NET Framework Class Library
+			Usage:		MySQLDriverCS.MySQLConnection
+			Standard：	Location=myServerAddress;Data Source=myDataBase;User ID=myUsername;Password=myPassword;Port=3306;Extended Properties="""";
+			
+			访问器名称：.NET Framework Data Provider for OLE DB
+			Type:		.NET Framework Wrapper Class Library
+			Usage:		System.Data.OleDb.OleDbConnection
+			Bridging to MySQL OLEDB：Provider=MySQLProv;Data Source=mydb;User Id=myUsername;Password=myPassword;
+			
+			访问器名称：.NET Framework Data Provider for ODBC
+			Type:		.NET Framework Wrapper Class Library
+			Usage:		System.Data.Odbc.OdbcConnection
+			Bridging to MySQL Connector/ODBC 5.1：Driver={MySQL ODBC 5.1 Driver};Server=localhost;Database=myDataBase; User=myUsername;Password=myPassword;Option=3;
+			
+	HTML Table：
+			访问器名称：.NET Framework Data Provider for OLE DB		
+			Type:		.NET Framework Wrapper Class Library
+			Usage:		System.Data.OleDb.OleDbConnection
+			Bridging to Jet OLE DB 4.0：Provider=Microsoft.Jet.OLEDB.4.0;Data Source=http://www.websitewithhtmltable.com/tablepage.html;Extended Properties="HTML Import;HDR=YES;IMEX=1";
+	
+	Textfile：
+			访问器名称：.NET Framework Data Provider for OLE DB	
+			Type:		.NET Framework Wrapper Class Library
+			Usage:		System.Data.OleDb.OleDbConnection
+			Bridging to Jet OLE DB 4.0：Provider=Microsoft.Jet.OLEDB.4.0;Data Source=c:\txtFilesFolder\;Extended Properties="text;HDR=Yes;FMT=Delimited";
+			
+			访问器名称：.NET Framework Data Provider for ODBC
+			Type:		.NET Framework Wrapper Class Library
+			Usage:		System.Data.Odbc.OdbcConnection
+			Bridging to Microsoft Text ODBC Driver：Driver={Microsoft Text Driver (*.txt; *.csv)};Dbq=c:\txtFilesFolder\;Extensions=asc,csv,tab,txt;
+	
+	SharePoint：
+			访问器名称：.NET Framework Data Provider for OLE DB		
+			Type:		.NET Framework Wrapper Class Library
+			Usage:		System.Data.OleDb.OleDbConnection
+			Bridging to ACE OLEDB 12.0：Provider=Microsoft.ACE.OLEDB.12.0;WSS;IMEX=2;RetrieveIds=Yes; DATABASE=http://pp1webofficelivecom.officelive.com/Documents/;LIST={5999B8A0-0C2F-4D4D-9C5A-D7B146E49698};

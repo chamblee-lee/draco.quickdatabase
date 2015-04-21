@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E234BBE2-65B6-44F5-81B6-2F554DE80BD4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CodeGenerator</RootNamespace>
+    <AssemblyName>CodeGenerator</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationIcon>程序图标.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NET2_0</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v10.2, Version=10.2.8.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v10.2, Version=10.2.8.0, Culture=neutral, PublicKeyToken=58eb2150d286b637, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Design.v10.2, Version=10.2.8.0, Culture=neutral, PublicKeyToken=58eb2150d286b637, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v10.2, Version=10.2.8.0, Culture=neutral, PublicKeyToken=58eb2150d286b637, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v10.2, Version=10.2.8.0, Culture=neutral, PublicKeyToken=58eb2150d286b637, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v10.2.Design, Version=10.2.8.0, Culture=neutral, PublicKeyToken=58eb2150d286b637, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v10.2, Version=10.2.8.0, Culture=neutral, PublicKeyToken=58eb2150d286b637, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v10.2.Design, Version=10.2.8.0, Culture=neutral, PublicKeyToken=58eb2150d286b637, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v10.2, Version=10.2.8.0, Culture=neutral, PublicKeyToken=58eb2150d286b637, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\DevExpress.XtraGrid.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Win32Security, Version=0.3.2042.25967, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Win32Security.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConnectionConfig.cs" />
+    <Compile Include="MainDevForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainDevForm1.Designer.cs">
+      <DependentUpon>MainDevForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NtfsUserPermissions.cs" />
+    <Compile Include="ServiceManage.cs" />
+    <Compile Include="ShowDbCase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowDbCase.designer.cs">
+      <DependentUpon>ShowDbCase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MainDevForm1.resx">
+      <DependentUpon>MainDevForm1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowDbCase.resx">
+      <DependentUpon>ShowDbCase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowErrorInf.resx">
+      <DependentUpon>ShowErrorInf.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="App.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\DevExpress.BonusSkins.v10.2.dll" />
+    <Content Include="lib\DevExpress.Data.v10.2.dll" />
+    <Content Include="lib\DevExpress.Design.v10.2.dll" />
+    <Content Include="lib\DevExpress.Utils.v10.2.dll" />
+    <Content Include="lib\DevExpress.XtraBars.v10.2.Design.dll" />
+    <Content Include="lib\DevExpress.XtraBars.v10.2.dll" />
+    <Content Include="lib\DevExpress.XtraEditors.v10.2.Design.dll" />
+    <Content Include="lib\DevExpress.XtraEditors.v10.2.dll" />
+    <Content Include="lib\DevExpress.XtraGrid.v10.2.dll" />
+    <Content Include="lib\Microsoft.Office.Interop.Word.dll" />
+    <Content Include="lib\System.Data.SqlServerCe.dll" />
+    <Content Include="lib\Win32Security.dll" />
+    <Content Include="TemConfig.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="图标2.ico" />
+    <Content Include="程序图标.ico" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ShowErrorInf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowErrorInf.Designer.cs">
+      <DependentUpon>ShowErrorInf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableSchemaToWord.cs" />
+    <Compile Include="WebConfigFileCtrl.cs" />
+    <Compile Include="WinSys.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Draco.DB.ORM\Draco.DB.ORM.csproj">
+      <Project>{D6329440-C064-4CD7-9DB9-5257191ED684}</Project>
+      <Name>Draco.DB.ORM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Draco.DB.QuickDataBase\Draco.DB.QuickDataBase.csproj">
+      <Project>{999E4E5B-7358-4169-A07F-DAF09D157497}</Project>
+      <Name>Draco.DB.QuickDataBase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

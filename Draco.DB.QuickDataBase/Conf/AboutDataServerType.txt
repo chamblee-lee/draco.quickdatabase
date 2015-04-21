@@ -1,0 +1,25 @@
+﻿关于数据库服务器类型与访问驱动：
+
+1.数据库类型：
+	常见数据库类型有：SQLServer、Oracle、Access、SQLite、MySQL、IBM DB2、Postgre SQL、Firebird、Excel、Visual FoxPro / FoxPro 2.x、 Textfile 
+
+2.数据库访问器：
+	.NET数据访问器分为三类：
+	1)专用数据库访问的.NET Framework Class Library
+		eg:	SQL访问：System.Data.SqlClient.SqlConnection			(Microsoft提供)
+			Oracle访问：System.Data.OracleClient.OracleConnection	(Microsoft提供)
+						Oracle.DataAccess.Client.OracleConnection	(Oracle厂家提供)
+			SQLite.NET：System.Data.SQLite.SQLiteConnection			(开源社区提供)
+			
+	2)OLEDB 提供程序封装：
+			System.Data.OleDb.OleDbConnection，由Microsoft提供，通过OLEDB提供程序访问各种类型数据库
+	3)ODBC 驱动程序封装：
+			System.Data.Odbc.OdbcConnection，由Microsoft提供，通过ODBC驱动访问各种类型数据库
+			
+3.本类库支持的访问器
+	内置支持:
+		System.Data.SqlClient.SqlConnection,
+		System.Data.OracleClient.OracleConnection,
+		System.Data.OleDb.OleDbConnection
+	扩展支持：
+		其它类型

@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{999E4E5B-7358-4169-A07F-DAF09D157497}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Draco.DB.QuickDataBase</RootNamespace>
+    <AssemblyName>Draco.DB.QuickDataBase</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\4.0\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NET4_0</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\bin\4.0\Draco.DB.QuickDataBase.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapter\DataBaseAdapterCreator.cs" />
+    <Compile Include="Common\DbTransactionScope.cs" />
+    <Compile Include="Common\ExecuteSqlFile.cs" />
+    <Compile Include="Common\NamedSQLAttribute.cs" />
+    <Compile Include="Common\NamedSQLConfig.cs" />
+    <Compile Include="Common\TableSchemaInOut.cs" />
+    <Compile Include="Configuration\ConnectionInfoSectionHandler.cs" />
+    <Compile Include="IDataParameters.cs" />
+    <Compile Include="Common\SQLGenerator.cs" />
+    <Compile Include="IDataBaseContext.cs" />
+    <Compile Include="IDataBaseSchemaHandler.cs" />
+    <Compile Include="Common\CommonSQL.cs" />
+    <Compile Include="Common\DataBaseAdapter.cs" />
+    <Compile Include="Common\DataBaseHandlerEx.cs" />
+    <Compile Include="Common\DataBaseTransaction.cs" />
+    <Compile Include="Common\DataParameters.cs" />
+    <Compile Include="Configuration\ConnectionInfo.cs" />
+    <Compile Include="Configuration\DbProviderConfigurationLoader.cs" />
+    <Compile Include="Configuration\DbProviderFactoriesConfiguration.cs" />
+    <Compile Include="Configuration\DbProviderFactoryConfiguration.cs" />
+    <Compile Include="DataBaseContext.cs" />
+    <Compile Include="Common\DataBaseEntry.cs" />
+    <Compile Include="Common\DataBaseHandler.cs" />
+    <Compile Include="Adapter\IDataBaseAdapter.cs" />
+    <Compile Include="IDataBaseHandler.cs" />
+    <Compile Include="INamedSQLConfig.cs" />
+    <Compile Include="ISQLGenerator.cs" />
+    <Compile Include="OleClient\OleAdapter.cs" />
+    <Compile Include="OleClient\OleSchemaHandler.cs" />
+    <Compile Include="OleClient\OleSQLGenerator.cs" />
+    <Compile Include="OracleClient\OracleAdapter.cs" />
+    <Compile Include="OracleClient\OracleSchemaHandler.cs" />
+    <Compile Include="OracleClient\OracleSQLGenerator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryOperator.cs" />
+    <Compile Include="Schema\ADOType.cs" />
+    <Compile Include="Schema\TabStruCollection.cs" />
+    <Compile Include="Schema\Vendor\Implementation\DataTableColumn.cs" />
+    <Compile Include="Schema\Vendor\Implementation\DataType.cs" />
+    <Compile Include="Schema\Vendor\Implementation\DataName.cs" />
+    <Compile Include="Schema\Vendor\IDataName.cs" />
+    <Compile Include="Schema\Vendor\IDataTableColumn.cs" />
+    <Compile Include="Schema\Vendor\IDataType.cs" />
+    <Compile Include="Schema\Vendor\Implementation\Table.cs" />
+    <Compile Include="Schema\Vendor\ITable.cs" />
+    <Compile Include="SqlCeClient\SqlCeAdapter.cs" />
+    <Compile Include="SqlCeClient\SqlCeSchemaHandler.cs" />
+    <Compile Include="SqlCeClient\SqlCeSQLGenerator.cs" />
+    <Compile Include="SqlClient\SqlSchemaHandler.cs" />
+    <Compile Include="SqlClient\SqlServerAdapter.cs" />
+    <Compile Include="SqlClient\SQLServerSQLGenerator.cs" />
+    <Compile Include="Common\TableDataInOut.cs" />
+    <Compile Include="SqLiteClient\SQLiteAdapter.cs" />
+    <Compile Include="SqLiteClient\SQLiteSchemaHandler.cs" />
+    <Compile Include="SqLiteClient\SQLiteSQLGenerator.cs" />
+    <Compile Include="Threading\CallContextStorage.cs" />
+    <Compile Include="Threading\IThreadStorage.cs" />
+    <Compile Include="Threading\LogicalThreadContext.cs" />
+    <Compile Include="Utility\ArrayHelper.cs" />
+    <Compile Include="Utility\CBO.cs" />
+    <Compile Include="Utility\CharacterHelper.cs" />
+    <Compile Include="Utility\ConnectionStringAnalyzer.cs" />
+    <Compile Include="Utility\ObjectFactory.cs" />
+    <Compile Include="Utility\ParameterizedSQL.cs" />
+    <Compile Include="Utility\SimpleTimestampGen.cs" />
+    <Compile Include="Utility\TimestampGenerator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Conf\AboutConnectionString.txt" />
+    <EmbeddedResource Include="Conf\AboutDataServerType.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Conf\DbAdapter.config" />
+    <EmbeddedResource Include="Conf\Connection.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

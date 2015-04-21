@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<configuration>
+	<ConnectionString>Server=(local);User id=sa;Pwd=sa;Database=msdb;</ConnectionString>
+	<DataServerType>0</DataServerType>
+	
+	<Context>ContextName</Context>
+	<Namespace>Draco.DataTblCtrlLayer</Namespace>
+	<Isdao>1</Isdao>
+	<Outputpath>C:\Temp</Outputpath>
+	<Spkgenerator>GUID</Spkgenerator>
+
+	<Theme>Money Twins</Theme>
+</configuration>

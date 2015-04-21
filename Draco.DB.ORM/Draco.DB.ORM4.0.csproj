@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D6329440-C064-4CD7-9DB9-5257191ED684}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Draco.DB.ORM</RootNamespace>
+    <AssemblyName>Draco.DB.ORM</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\4.0\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NET4_0</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\bin\4.0\Draco.DB.ORM.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapter\IORMAdapter.cs" />
+    <Compile Include="Adapter\ORMAdapterCreator.cs" />
+    <Compile Include="Common\AutoSQL\CommonSQL.cs" />
+    <Compile Include="Common\AutoSQL\ExpSQLBuilder.cs" />
+    <Compile Include="Common\AutoSQL\FieldTypeConvert.cs" />
+    <Compile Include="Common\AutoSQL\Expression.cs" />
+    <Compile Include="Common\AutoSQL\SQLBuilder.cs" />
+    <Compile Include="Compatible\CodeGenerator.cs" />
+    <Compile Include="Compatible\EntityBase.cs" />
+    <Compile Include="Compatible\PKGeneratorCompatible.cs" />
+    <Compile Include="Compatible\TblStruBase.cs" />
+    <Compile Include="Conf\ORMDbProviderConfigurationLoader.cs" />
+    <Compile Include="IEntityHandle.cs" />
+    <Compile Include="Generator\EntityCodeGenerator.cs" />
+    <Compile Include="IORMContext.cs" />
+    <Compile Include="OleClient\OleORMAdapter.cs" />
+    <Compile Include="OleClient\OleSchemaLoader.cs" />
+    <Compile Include="OleClient\PKGeneratorOle.cs" />
+    <Compile Include="OracleClient\OracleORMAdapter.cs" />
+    <Compile Include="OracleClient\OracleSchemaLoader.cs" />
+    <Compile Include="OracleClient\PKGeneratorOra.cs" />
+    <Compile Include="ORMContext.cs" />
+    <Compile Include="Common\DataLoader.cs" />
+    <Compile Include="Common\AbstractEntity.cs" />
+    <Compile Include="OleClient\SQLBuilderOle.cs" />
+    <Compile Include="OracleClient\SQLBuilderOracle.cs" />
+    <Compile Include="PKGenerator\Common\GUIDPKGenerator.cs" />
+    <Compile Include="PKGenerator\Common\SimpleGUIDPKGenerator.cs" />
+    <Compile Include="PKGenerator\Common\TimestampPKGenerator.cs" />
+    <Compile Include="PKGenerator\IPKGenerator.cs" />
+    <Compile Include="PKGenerator\PKGeneratorEnum.cs" />
+    <Compile Include="PKGenerator\PKGeneratorFactory.cs" />
+    <Compile Include="SqlCeClient\SQLBuilderSqlCe.cs" />
+    <Compile Include="SqlCeClient\SqlCeORMAdapter.cs" />
+    <Compile Include="SqlCeClient\SqlCeSchemaLoader.cs" />
+    <Compile Include="SqLiteClient\PKGeneratorSqLite.cs" />
+    <Compile Include="SqLiteClient\SQLBuilderSqLite.cs" />
+    <Compile Include="SqLiteClient\SQLiteORMAdapter.cs" />
+    <Compile Include="SqLiteClient\SqLiteSchemaLoader.cs" />
+    <Compile Include="SqlServerClient\PKGeneratorSQLServer.cs" />
+    <Compile Include="SqlServerClient\SQLBuilderSQLServer.cs" />
+    <Compile Include="Common\EntityHandle.cs" />
+    <Compile Include="Mapping\MappingManager.cs" />
+    <Compile Include="Schema\Dbml\DbmlSchema.Adapter.cs" />
+    <Compile Include="Schema\Dbml\DbmlSchema.cs">
+      <DependentUpon>DbmlSchema.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\Dbml\DbmlSerializer.cs" />
+    <Compile Include="Schema\Vendor\Implementation\SchemaLoader.cs" />
+    <Compile Include="Schema\Vendor\Implementation\SchemaLoader.DataName.cs" />
+    <Compile Include="Schema\Vendor\Implementation\SchemaLoader.DataTableColumn.cs" />
+    <Compile Include="Schema\Vendor\Implementation\SchemaLoader.TypeMapping.cs" />
+    <Compile Include="Schema\Vendor\ISchemaLoader.cs" />
+    <Compile Include="SqlServerClient\SQLServerORMAdapter.cs" />
+    <Compile Include="SqlServerClient\SqlSchemaLoader.cs" />
+    <Compile Include="Utility\CharacterHelper.cs" />
+    <Compile Include="Schema\DataTypeConvert.cs" />
+    <Compile Include="Mapping\AttrMapping\AttrMappingLoader.cs" />
+    <Compile Include="Mapping\AttrMapping\FieldMappingAttribute.cs" />
+    <Compile Include="Mapping\AttrMapping\TableMappingAttribute.cs" />
+    <Compile Include="Mapping\AttrMapping\PrimaryKeyMappingAttribute.cs" />
+    <Compile Include="Mapping\FieldMapping.cs" />
+    <Compile Include="Mapping\FieldType.cs" />
+    <Compile Include="Mapping\IFieldMapping.cs" />
+    <Compile Include="Mapping\IMappingLoader.cs" />
+    <Compile Include="Mapping\IPrimaryKeyMapping.cs" />
+    <Compile Include="Mapping\ITableMapping.cs" />
+    <Compile Include="Mapping\MappingException.cs" />
+    <Compile Include="Mapping\MappingPool.cs" />
+    <Compile Include="Mapping\PrimaryKeyMapping.cs" />
+    <Compile Include="Mapping\TableMapping.cs" />
+    <Compile Include="Mapping\Utility.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\MemberInfoExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Schema\Dbml\DbmlSchema.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="log4net.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Conf\DbAdapter.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Draco.DB.QuickDataBase\Draco.DB.QuickDataBase4.0.csproj">
+      <Project>{999E4E5B-7358-4169-A07F-DAF09D157497}</Project>
+      <Name>Draco.DB.QuickDataBase4.0</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
